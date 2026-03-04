@@ -7,12 +7,12 @@ meta:
   modified: 1772648924773
   description: ""
 collection:
-  - url: "{{ _.DesktopLocal }}/login/with-login"
+  - url: "{{ _.real_url_homolog }}/login/with-login"
     name: Login WithLogin
     meta:
       id: req_451e0b4f58934ba5abfdbf24b7b4e787
       created: 1768333449840
-      modified: 1772215323356
+      modified: 1772652904471
       isPrivate: false
       description: ""
       sortKey: -1768332224931.7634
@@ -488,13 +488,12 @@ collection:
       description: ""
     children:
       - url: "{{ _.real_url_smartnew
-          }}/maintenance/service-order/app/choice/equipment?timestamp=2026-02-2\
-          6T15:09:00Z"
+          }}/buy/app/list-complete?timestamp=2026-03-04T15:09:00Z"
         name: GET PULL APP
         meta:
           id: req_2c832c48dbe74f33862c306db9515312
           created: 1769441711767
-          modified: 1772205543541
+          modified: 1772653154545
           isPrivate: false
           description: ""
           sortKey: -1769441713943
@@ -640,12 +639,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.real_url_homolog }}/maintenance/service-order/app/choice/equipment"
+      - url: "{{ _.real_url_homolog }}/buy/app/list-complete"
         name: GET PULL APP NO-TIMESTAMP
         meta:
           id: req_b356558c8ea146deac368d934dc2d591
           created: 1769443665090
-          modified: 1772144973807
+          modified: 1772653136741
           isPrivate: false
           description: ""
           sortKey: -1769441714043
@@ -1362,22 +1361,56 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: aprobbationSprint
+    meta:
+      id: fld_b37390012c32425982222c9084f15bea
+      created: 1772652876321
+      modified: 1772652881938
+      sortKey: -1772652876321
+      description: ""
+    children:
+      - url: https://api-homolog.smartnewservices.com.br/script-case/buy/approbation
+        name: approbation
+        meta:
+          id: req_74aeae38d0c2421fb60b14110c6ca32d
+          created: 1772652886643
+          modified: 1772653108210
+          isPrivate: false
+          description: ""
+          sortKey: -1772652886643
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_5841193f1bb64e3dabb31e69baeb7fc1
     created: 1769452375278
-    modified: 1772572853208
+    modified: 1772652905822
   cookies:
-    - id: acd28b3e-fccb-4e5f-8b69-6289e10112a4
+    - id: 524b25c1-4fab-4993-af81-3f1b1ac97f2a
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzI1NjczMzUsImV4cCI6MTc3MjU3ODEzNX0.4zJficL7ezG6NzwU8AeHrJvs-Y6WbnfriN5-PvY6NFk
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MjY1MjkxNCwiZXhwIjoxNzcyNjYzNzE0fQ.-1W0H0XyZ9ePbmUGyPnrSzVVTOawa6Vs6McKEet3518
       domain: api-homolog.smartnewservices.com.br
       path: /
       secure: false
       httpOnly: true
       hostOnly: true
-    - id: 6e645203-ce3c-4562-bfde-d3d180cca243
+    - id: 85b9ad2b-8df3-426b-bd8d-55f3d68f006d
       key: jwt
       value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MjU3Mjg0NCwiZXhwIjoxNzcyNTgzNjQ0fQ.W8x00yztgTuoEoWAE6IXdpn58TnbEA8xLd3Q7vgJM9w
       domain: 192.168.1.210
@@ -1385,7 +1418,7 @@ cookieJar:
       secure: false
       httpOnly: true
       hostOnly: true
-    - id: 2f81a742-d473-46f5-b7a3-b1be342240c8
+    - id: 20ffab74-280b-43c3-8045-e0ac967f8473
       key: jwt
       value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwiaWF0IjoxNzcwNDIzOTc5fQ.NJcfa9hHGI-HJohll0aovXwvPWAca3oVJbtnzleXC-o
       domain: api.smartnewservices.com.br
@@ -1393,7 +1426,7 @@ cookieJar:
       secure: true
       httpOnly: true
       hostOnly: true
-    - id: 8784932d-3684-426b-9d1c-295b0d68a850
+    - id: 1c328dd6-ac3d-4d50-b063-ffc622645d01
       key: jwt
       value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MTUwOTMxNCwiZXhwIjoxNzcxNTIwMTE0fQ.C9-ABHbufwS1ys-e5ViP22cZFnmg3bn8N0EOjSFNOyQ
       domain: api-smartnew.samaecaxias.com.br
@@ -1406,10 +1439,10 @@ environments:
   meta:
     id: env_7a20ff17a67a4edebfc848f62fb9002f
     created: 1768332224799
-    modified: 1772572860260
+    modified: 1772652915986
     isPrivate: false
   data:
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MjU3Mjg0NCwiZXhwIjoxNzcyNTgzNjQ0fQ.W8x00yztgTuoEoWAE6IXdpn58TnbEA8xLd3Q7vgJM9w
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MjY1MjkxNCwiZXhwIjoxNzcyNjYzNzE0fQ.-1W0H0XyZ9ePbmUGyPnrSzVVTOawa6Vs6McKEet3518
     baseurl: http://localhost:4001
     real_url_homolog: https://api-homolog.smartnewservices.com.br
     real_url_smartnew: https://api.smartnewservices.com.br
