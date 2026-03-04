@@ -1,0 +1,1417 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: SmartNew
+meta:
+  id: wrk_8638d466b2e64474a046c3f5e8cbdb5d
+  created: 1772648924773
+  modified: 1772648924773
+  description: ""
+collection:
+  - url: "{{ _.DesktopLocal }}/login/with-login"
+    name: Login WithLogin
+    meta:
+      id: req_451e0b4f58934ba5abfdbf24b7b4e787
+      created: 1768333449840
+      modified: 1772215323356
+      isPrivate: false
+      description: ""
+      sortKey: -1768332224931.7634
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"login": "bruno.matias"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://api-homolog.smartnewservices.com.br/script-case/buy/approbation
+    name: GET Random
+    meta:
+      id: req_20be34470557497f80220c193b301351
+      created: 1768570808377
+      modified: 1772645255029
+      isPrivate: false
+      description: ""
+      sortKey: -1768332224891.6328
+    method: GET
+    parameters:
+      - name: route
+        value: findBuyByLogin
+      - name: globalFilter
+        value: ""
+      - name: status
+        value: ""
+      - name: filterColumn
+        value: ""
+      - name: filterText
+        value: ""
+      - name: page
+        value: "1"
+      - name: perPage
+        value: "10"
+      - name: login
+        value: bruno.matias
+      - name: clientId
+        value: "2"
+      - name: blank
+        value: blank_aprovacoes_cotacao
+      - name: module
+        value: "9"
+    headers:
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.DesktopLocal }}/maintenance/appointment"
+    name: POST Random
+    meta:
+      id: req_be7ee17bf6414a189359ee17f7d2bbb1
+      created: 1768587834893
+      modified: 1772567318838
+      isPrivate: false
+      description: ""
+      sortKey: -1768332224917.3164
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"equipmentId": 381052,
+        	"unitPlanId": 662,
+        	"value": 12,
+        	"observation": "teste",
+        	"readingDate": "2026-03-03T14:08"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.DesktopLocal }}/security/user/teste123"
+    name: PUT Random
+    meta:
+      id: req_53f9e82d63274e4aa12fc54a55bc54d9
+      created: 1768836843042
+      modified: 1772466771090
+      isPrivate: false
+      description: ""
+      sortKey: -1768332224891.291
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "name": "default",
+            "branchId": 1,
+            "groupId": 883,
+            "email": "default",
+            "phone": null,
+            "status": true,
+            "role": "user",
+            "level": null,
+            "blocked": false
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.DesktopLocal }}/script-case/buy/elevations/14/limit/57"
+    name: DELETE Random
+    meta:
+      id: req_30743d45d9b545a2834dbb33db1a40f3
+      created: 1770039481648
+      modified: 1772466831014
+      isPrivate: false
+      description: ""
+      sortKey: -1768332224791.291
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.DesktopLocal }}/login"
+    name: Login Normal
+    meta:
+      id: req_f327a108122a47b883ea58a77ecd1425
+      created: 1771869160709
+      modified: 1772567338696
+      isPrivate: false
+      description: ""
+      sortKey: -1768332224930.961
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"login": "admin-semptcl_",
+        	"pass": "12345678"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - name: Debug
+    meta:
+      id: fld_772cf47a767f49bda82092896cb9aa66
+      created: 1769026806346
+      modified: 1769457007926
+      sortKey: -1769026806346
+      description: ""
+    children:
+      - url: "{{ _.real_url_homolog }}/script-case/buy/list-status"
+        name: GET Random
+        meta:
+          id: req_8e6a6cbc35104624a5aa890eec6b0bd9
+          created: 1769026821983
+          modified: 1772199911140
+          isPrivate: false
+          description: ""
+          sortKey: -1770613362463.5
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://pdf-api-smartnew.samaecaxias.com.br/pdf/equipmentByIds
+        name: POST RANDOM
+        meta:
+          id: req_8a6fa45bf8954fb490980d049dce1603
+          created: 1769026879816
+          modified: 1772481292234
+          isPrivate: false
+          description: ""
+          sortKey: -1768679527936
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "equipmentIds": [],
+                "allEquipment": true,
+                "login": "adm_smart"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/login"
+        name: Token Generate
+        meta:
+          id: req_4b910d8a54d949aeb0d1977c4e69646a
+          created: 1769026930809
+          modified: 1772205016641
+          isPrivate: false
+          description: ""
+          sortKey: -1769026830979
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"login": "bruno.matias",
+            	"pass": "@Bm042008"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/script-case/buy/list-status"
+        name: New Request
+        meta:
+          id: req_54810f00e04847d9acabee5ef0d41eaf
+          created: 1772199893948
+          modified: 1772199896287
+          isPrivate: false
+          description: ""
+          sortKey: -1772199893948
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Real URL
+    meta:
+      id: fld_c28eec87b3ff4d448e8886eb4a8f9625
+      created: 1769084856072
+      modified: 1769457007926
+      sortKey: -1769084856072
+      description: ""
+    children:
+      - url: "{{ _.realurl
+          }}/maintenance/reports/material-service-order?index=1566&perPage=10&p\
+          eriod%5Bfrom%5D=2025-12-24&period%5Bto%5D=2026-01-23"
+        name: GET RANDOM
+        meta:
+          id: req_58b25e27147b4aa6950bb6acdda67fd4
+          created: 1768332224893
+          modified: 1769457007926
+          isPrivate: false
+          description: ""
+          sortKey: -1769084877978
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.realurl }}/login"
+        name: Token Generate Normal
+        meta:
+          id: req_8df5471bb5c54a6c8a01e598f835ec95
+          created: 1769084863427
+          modified: 1769457007926
+          isPrivate: false
+          description: ""
+          sortKey: -1769084878078
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"login": "cleidiani.silva",
+            	"pass": "WWWWWW"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Order-service
+    meta:
+      id: fld_75da5d115c4847d882fddec76b038da7
+      created: 1769441523122
+      modified: 1769457007926
+      sortKey: -1768679515669.5
+      description: ""
+    children:
+      - url: "{{baseurl}}/maintenance/service-order"
+        name: UPDATE OS
+        meta:
+          id: req_1a8c32210f7c42998968183672475651
+          created: 1768333575191
+          modified: 1769457007926
+          isPrivate: false
+          description: ""
+          sortKey: -1769441543563
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/maintenance/service-order/"
+        name: GET OS
+        meta:
+          id: req_1e76e9fa532b4579b06c812c359a4d75
+          created: 1769084884933
+          modified: 1771453362566
+          isPrivate: false
+          description: ""
+          sortKey: -1769441543663
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: App
+    meta:
+      id: fld_d0c5649548cf4e9b9e0ab174f19968c8
+      created: 1769441609705
+      modified: 1769607257139
+      sortKey: -1768419047662.125
+      description: ""
+    children:
+      - url: "{{ _.real_url_smartnew
+          }}/maintenance/service-order/app/choice/equipment?timestamp=2026-02-2\
+          6T15:09:00Z"
+        name: GET PULL APP
+        meta:
+          id: req_2c832c48dbe74f33862c306db9515312
+          created: 1769441711767
+          modified: 1772205543541
+          isPrivate: false
+          description: ""
+          sortKey: -1769441713943
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.baseurl }}/buy/app/sync/sync-complete"
+        name: POST PUSH APP
+        meta:
+          id: req_a36b7c9ac96c46d68ce2dd7e107c8bd5
+          created: 1769441726700
+          modified: 1769607421121
+          isPrivate: false
+          description: ""
+          sortKey: -1769441713843
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "changes": {
+                "users": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "branches": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "buyStatuses": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "material": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "materialCode": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "equipment": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "serviceOrder": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "logBuy": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "logBuyItem": {
+                  "created": [
+                    {
+                      "id": "13nLBS3oSE6QBNEe",
+                      "_status": "created",
+                      "_changed": "",
+                      "buy_id": "318d1KCk7CXad6Xz",
+                      "composition_item_id": "item-5",
+                      "material_id": "",
+                      "material_secondary_id": "70601",
+                      "equipment_id": null,
+                      "service_order_id": "121327",
+                      "priority_id": "3",
+                      "quantity": 1,
+                      "vinculo": "os",
+                      "observation": "Teste app",
+                      "approved": false,
+                      "stock": 0,
+                      "id_app": null,
+                      "logDate": "2026-01-28T13:32:25.732Z"
+                    }
+                  ],
+                  "updated": [],
+                  "deleted": []
+                },
+                "compositionGroup": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "buyPriority": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "compositionGroupItem": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "costCenter": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "descriptionCostCenter": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                }
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.real_url_homolog }}/maintenance/service-order/app/choice/equipment"
+        name: GET PULL APP NO-TIMESTAMP
+        meta:
+          id: req_b356558c8ea146deac368d934dc2d591
+          created: 1769443665090
+          modified: 1772144973807
+          isPrivate: false
+          description: ""
+          sortKey: -1769441714043
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.baseurl }}/script-case/buy/23092/item"
+        name: POST WEB
+        meta:
+          id: req_9b7d2e6104a14cd681afb15230ba9b81
+          created: 1769452920686
+          modified: 1769457007926
+          isPrivate: false
+          description: ""
+          sortKey: -1769441646411.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "route": "insertItem",
+                "id": 23092,
+                "bound": "equipment",
+                "item_bound": "10875",
+                "material": "70301",
+                "selection_stock": "66630",
+                "unity": "PCT",
+                "cost_center": null,
+                "quantity": "1",
+                "observation": "16 e 39 teste",
+                "priority": "3",
+                "deadline": "10 dia(s)",
+                "stock": false,
+                "login": "bruno.matias",
+                "clientId": "2",
+                "module": 9,
+                "blank": "blank_compras_grid",
+                "id_secondary": "66630"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Validacao
+    meta:
+      id: fld_64c75511278a496599cc9fc26413831f
+      created: 1769538223813
+      modified: 1769605497054
+      sortKey: -1768375636327.5625
+      description: ""
+    children:
+      - url: "{{ _.real_url_homolog
+          }}/maintenance/reports/material-service-order?index=0&perPage=10&peri\
+          od%5Bfrom%5D=2025-12-28&period%5Bto%5D=2026-01-27"
+        name: /manutencao/material-grid
+        meta:
+          id: req_420495d34b1240eeb86279e2b627962f
+          created: 1769538235106
+          modified: 1769715649918
+          isPrivate: false
+          description: VALOR
+          sortKey: -1769538237432
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.real_url_homolog
+          }}/buy/report/stock-buy?index=0&perPage=10&period%5Bfrom%5D=2026-01-0\
+          1&period%5Bto%5D=2026-01-31&startDate=2026-01-01&endDate=2026-01-31 "
+        name: "/manutencao/relatorio/entrada-saida-lancamento "
+        meta:
+          id: req_79d2da6474ed48e8ab7747d4973a8eeb
+          created: 1769540566956
+          modified: 1769715802945
+          isPrivate: false
+          description: |-
+            Entrada
+
+            Valor Saida
+          sortKey: -1769489975737.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.real_url_homolog
+          }}/maintenance/reports/cost-maintainer?index=0&perPage=10&filterText=\
+          &filterData%5Bperiod%5D%5Bfrom%5D=2025-12-28&filterData%5Bperiod%5D%5\
+          Bto%5D=2026-01-27&period%5Bfrom%5D=2025-12-28&period%5Bto%5D=2026-01-\
+          27&date%5Bfrom%5D=2025-12-28&date%5Bto%5D=2026-01-27"
+        name: /manutencao/custo-manutencao
+        meta:
+          id: req_6d1e2ac0eaa143dc94df29535d320f58
+          created: 1769540623036
+          modified: 1769715829680
+          isPrivate: false
+          description: |
+            CUSTO MATERIAL
+          sortKey: -1769489975637.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.real_url_homolog }}/buy/report/stock?index=0&perPage=10"
+        name: /manutencao/relatorio/posicao-estoque
+        meta:
+          id: req_ea1496e0ccda4eefbe5fe366074b86bb
+          created: 1769541062135
+          modified: 1769716328817
+          isPrivate: false
+          description: |-
+            PREÇO NF - SAIDA
+            PREÇO NF - ENTRADA
+          sortKey: -1769465844840.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Stock Validation
+    meta:
+      id: fld_c0f71c83f89545a38d9cfc3777d04487
+      created: 1770387197183
+      modified: 1770397997889
+      sortKey: -1768343077814.1406
+      description: ""
+    children:
+      - url: "{{ _.DesktopLocal }}/buy/report/stock?&material%5B%5D=67632"
+        name: stock
+        meta:
+          id: req_47089c18e23148a5a30eec9d2c14dbf2
+          created: 1770387205754
+          modified: 1770398955294
+          isPrivate: false
+          description: ""
+          sortKey: -1770387205754
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/maintenance/service-order/157541/list-secondary-code"
+        name: listsecondary
+        meta:
+          id: req_323a368b25ec4d0e822dd94b78b87a4d
+          created: 1770389702448
+          modified: 1770399197817
+          isPrivate: false
+          description: ""
+          sortKey: -1770388447126.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.real_url_homolog
+          }}/maintenance/service-order/157541/list-secondary-code"
+        name: listsecondary REAL
+        meta:
+          id: req_aba65633179845a7aafff81a1d99a056
+          created: 1770398037040
+          modified: 1770399102705
+          isPrivate: false
+          description: ""
+          sortKey: -1770387826440.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.real_url_homolog }}/buy/report/stock?&material%5B%5D=67632"
+        name: stock REAL
+        meta:
+          id: req_b458ae679098492d9ad99d4ee02e6bac
+          created: 1770398047212
+          modified: 1770398957330
+          isPrivate: false
+          description: ""
+          sortKey: -1770027701389.75
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Samae
+    meta:
+      id: fld_73d1c153fac141eb9359797abc8ef36d
+      created: 1770482675369
+      modified: 1770482675369
+      sortKey: -1770482675369
+      description: ""
+    children:
+      - url: "{{ _.DesktopLocal }}/login"
+        name: Token Generate Normal
+        meta:
+          id: req_5ed854ee748b41589f833c3200752406
+          created: 1768502611538
+          modified: 1771945541464
+          isPrivate: false
+          description: ""
+          sortKey: -1770482757483
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"login": "adm_smart",
+            	"pass": "@102030"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/maintenance/service-order/list-table"
+        name: list-complete app
+        meta:
+          id: req_265e1858a77c4853894b9c4a4a844109
+          created: 1770482818396
+          modified: 1771949550022
+          isPrivate: false
+          description: ""
+          sortKey: -1770482757383
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/location"
+        name: New Request
+        meta:
+          id: req_7016978cf23a49a7a53cb1c8b6c5fd88
+          created: 1771509241184
+          modified: 1772559673967
+          isPrivate: false
+          description: ""
+          sortKey: -1770482757583
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "location": "Santos",
+                "branchId": 50
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/choices/branch"
+        name: System Choices Branchs
+        meta:
+          id: req_7346d39cb80d44e2960fb7f49de47369
+          created: 1771514173170
+          modified: 1771516117663
+          isPrivate: false
+          description: ""
+          sortKey: -1771514173170
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://pdf-api-smartnew.samaecaxias.com.br/pdf/equipmentByIds
+        name: PDF
+        meta:
+          id: req_2ea28e8477014540ad352bf66491d1ff
+          created: 1772559649181
+          modified: 1772559865921
+          isPrivate: false
+          description: ""
+          sortKey: -1772559649181
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "equipmentIds": [],
+                "allEquipment": true,
+                "login": "adm_smart"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: MVP app
+    meta:
+      id: fld_7f7cc7ca7f8040368ebe4cc16f69deb9
+      created: 1770913597528
+      modified: 1770913611343
+      sortKey: -1768337651403.5703
+      description: ""
+    children:
+      - url: "{{ _.DesktopLocal }}/buy/app/list-complete"
+        name: list-complete
+        meta:
+          id: req_40da820028004468ac2531bed44bed34
+          created: 1770913618151
+          modified: 1771453134986
+          isPrivate: false
+          description: ""
+          sortKey: -1770913618151
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/login"
+        name: Token Generate Normal
+        meta:
+          id: req_4655f424ecb641b982ee4cff89464b72
+          created: 1770913630096
+          modified: 1770930149346
+          isPrivate: false
+          description: ""
+          sortKey: -1770913618251
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"login": "admin-semptcl_",
+            	"pass": "12345678"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/equipment"
+        name: New Request
+        meta:
+          id: req_2893f63e08934939a336f5936930b6cf
+          created: 1772135803976
+          modified: 1772135834589
+          isPrivate: false
+          description: ""
+          sortKey: -1772135803976
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "client": "2021",
+                "equipment": "Teste App",
+                "description": "Teste App",
+                "family": "5812",
+                "manufacturer": "Teste App",
+                "model": "Teste App",
+                "location": null
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: STG
+    meta:
+      id: fld_20a59827128944ccaff649c6cd28f1b6
+      created: 1771507984460
+      modified: 1771865590205
+      sortKey: -1768332224964.7896
+      description: ""
+    children:
+      - url: "{{ _.DesktopLocal }}/login"
+        name: Login Normal
+        meta:
+          id: req_c9369d3219a7478fadb1efa34c86a37b
+          created: 1770482701262
+          modified: 1771937452294
+          isPrivate: false
+          description: ""
+          sortKey: -1771518888646
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"login": "admin_semptcl_",
+            	"pass": "12345678"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/location"
+        name: New Request
+        meta:
+          id: req_e7bebb31bd8643ff8cc1612c752b11dc
+          created: 1771518888546
+          modified: 1771945496076
+          isPrivate: false
+          description: ""
+          sortKey: -1771518888546
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "location": "Santoss",
+                "branchId": 50
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: ChartFlow
+    meta:
+      id: fld_f10eac71068147d48af1b16bb9dd6958
+      created: 1772496030391
+      modified: 1772496030391
+      sortKey: -1772496030391
+      description: ""
+    children:
+      - url: https://api.cloud-services.yuv.com.br/alarms
+        name: ChartFlow
+        meta:
+          id: req_d45c59db3fc74e1dad9bf2d6c43fc163
+          created: 1772490583469
+          modified: 1772551572485
+          isPrivate: false
+          description: ""
+          sortKey: -1772496031739
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "deviceImei": "864993060089266",
+              "startDate": "2026-02-09 00:00:00",
+              "endDate": "2026-02-09 23:59:59"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4NCwiZGVhbGVyX2lkIjozMywiaWF0IjoxNzU0NTA0ODYxLCJleHAiOjE3ODYwNDA4NjF9.pC5yxVli88B3cka30uwplrQvAIA-hQI-y8VHNJQKJt8
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://abreus.store:3333/yuv/jimiAlarms/latest
+        name: New Request
+        meta:
+          id: req_ffcbed803bcc46a8be10a2e3f2a89c1a
+          created: 1772496035522
+          modified: 1772551579152
+          isPrivate: false
+          description: ""
+          sortKey: -1772496031839
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "deviceImei": [
+                864993060089266,
+                862798051734115,
+                864993060364172,
+                869247060310775,
+                862798051734115,
+                862798051738926,
+                864993060482933,
+                864993060256055,
+                864993060501534,
+                864993060364172
+              ],
+              "startDate": "2026-02-09 00:00:00",
+              "endDate": "2026-02-09 23:59:59"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: X-API-Key
+            value: "@102030"
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4NCwiZGVhbGVyX2lkIjozMywiaWF0IjoxNzU0NTA0ODYxLCJleHAiOjE3ODYwNDA4NjF9.pC5yxVli88B3cka30uwplrQvAIA-hQI-y8VHNJQKJt8
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5841193f1bb64e3dabb31e69baeb7fc1
+    created: 1769452375278
+    modified: 1772572853208
+  cookies:
+    - id: acd28b3e-fccb-4e5f-8b69-6289e10112a4
+      key: jwt
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzI1NjczMzUsImV4cCI6MTc3MjU3ODEzNX0.4zJficL7ezG6NzwU8AeHrJvs-Y6WbnfriN5-PvY6NFk
+      domain: api-homolog.smartnewservices.com.br
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+    - id: 6e645203-ce3c-4562-bfde-d3d180cca243
+      key: jwt
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MjU3Mjg0NCwiZXhwIjoxNzcyNTgzNjQ0fQ.W8x00yztgTuoEoWAE6IXdpn58TnbEA8xLd3Q7vgJM9w
+      domain: 192.168.1.210
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+    - id: 2f81a742-d473-46f5-b7a3-b1be342240c8
+      key: jwt
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwiaWF0IjoxNzcwNDIzOTc5fQ.NJcfa9hHGI-HJohll0aovXwvPWAca3oVJbtnzleXC-o
+      domain: api.smartnewservices.com.br
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+    - id: 8784932d-3684-426b-9d1c-295b0d68a850
+      key: jwt
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MTUwOTMxNCwiZXhwIjoxNzcxNTIwMTE0fQ.C9-ABHbufwS1ys-e5ViP22cZFnmg3bn8N0EOjSFNOyQ
+      domain: api-smartnew.samaecaxias.com.br
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_7a20ff17a67a4edebfc848f62fb9002f
+    created: 1768332224799
+    modified: 1772572860260
+    isPrivate: false
+  data:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MjU3Mjg0NCwiZXhwIjoxNzcyNTgzNjQ0fQ.W8x00yztgTuoEoWAE6IXdpn58TnbEA8xLd3Q7vgJM9w
+    baseurl: http://localhost:4001
+    real_url_homolog: https://api-homolog.smartnewservices.com.br
+    real_url_smartnew: https://api.smartnewservices.com.br
+    DesktopLocal: http://192.168.1.210:4001
+    real_url_samae: https://api-smartnew.samaecaxias.com.br
