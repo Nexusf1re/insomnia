@@ -12,10 +12,10 @@ collection:
     meta:
       id: req_451e0b4f58934ba5abfdbf24b7b4e787
       created: 1768333449840
-      modified: 1772652904471
+      modified: 1774271221874
       isPrivate: false
       description: ""
-      sortKey: -1768332224931.7634
+      sortKey: -1768332224924.1387
     method: POST
     body:
       mimeType: application/json
@@ -38,61 +38,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: https://api-homolog.smartnewservices.com.br/script-case/buy/approbation
-    name: GET Random
-    meta:
-      id: req_20be34470557497f80220c193b301351
-      created: 1768570808377
-      modified: 1772645255029
-      isPrivate: false
-      description: ""
-      sortKey: -1768332224891.6328
-    method: GET
-    parameters:
-      - name: route
-        value: findBuyByLogin
-      - name: globalFilter
-        value: ""
-      - name: status
-        value: ""
-      - name: filterColumn
-        value: ""
-      - name: filterText
-        value: ""
-      - name: page
-        value: "1"
-      - name: perPage
-        value: "10"
-      - name: login
-        value: bruno.matias
-      - name: clientId
-        value: "2"
-      - name: blank
-        value: blank_aprovacoes_cotacao
-      - name: module
-        value: "9"
-    headers:
-      - name: User-Agent
-        value: insomnia/12.2.0
-        description: ""
-        disabled: false
-    authentication:
-      type: bearer
-      token: "{{token}}"
-    settings:
-      renderRequestBody: true
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
-      rebuildPath: true
-  - url: "{{ _.DesktopLocal }}/maintenance/appointment"
+  - url: "{{ _.DesktopLocal }}/script-case/buy/request/18600/item"
     name: POST Random
     meta:
       id: req_be7ee17bf6414a189359ee17f7d2bbb1
       created: 1768587834893
-      modified: 1772567318838
+      modified: 1773864787759
       isPrivate: false
       description: ""
       sortKey: -1768332224917.3164
@@ -101,11 +52,15 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"equipmentId": 381052,
-        	"unitPlanId": 662,
-        	"value": 12,
-        	"observation": "teste",
-        	"readingDate": "2026-03-03T14:08"
+        	"requestId": 15783,
+        	"financeId": 1702,
+        	"status": 24,
+        	"itemId": [
+        		53255
+        	],
+        	"all_delivered": false,
+        	"justify": "test by insomnia",
+        	"quantity_delivered": 0
         }
     headers:
       - name: Content-Type
@@ -125,12 +80,14 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ _.DesktopLocal }}/security/user/teste123"
+  - url: "{{ _.DesktopLocal
+      }}/script-case/buy/request/16256/finance?login=bruno.matias&clientId=2&mo\
+      dule=9&blank=blank_compras_grid"
     name: PUT Random
     meta:
       id: req_53f9e82d63274e4aa12fc54a55bc54d9
       created: 1768836843042
-      modified: 1772466771090
+      modified: 1773865532324
       isPrivate: false
       description: ""
       sortKey: -1768332224891.291
@@ -139,15 +96,11 @@ collection:
       mimeType: application/json
       text: |-
         {
-            "name": "default",
-            "branchId": 1,
-            "groupId": 883,
-            "email": "default",
-            "phone": null,
-            "status": true,
-            "role": "user",
-            "level": null,
-            "blocked": false
+            "number": "11112222",
+            "documentType": 1,
+            "emissionDate": "2025-07-07T03:00:00.000Z",
+            "accessKey": "",
+            "dueDate": "2025-12-12T03:00:00.000Z"
         }
     headers:
       - name: Content-Type
@@ -167,12 +120,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ _.DesktopLocal }}/script-case/buy/elevations/14/limit/57"
+  - url: "{{ _.real_url_samae }}/system/equipment/type-equipment/3"
     name: DELETE Random
     meta:
       id: req_30743d45d9b545a2834dbb33db1a40f3
       created: 1770039481648
-      modified: 1772466831014
+      modified: 1773070762192
       isPrivate: false
       description: ""
       sortKey: -1768332224791.291
@@ -190,12 +143,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ _.DesktopLocal }}/login"
+  - url: "{{ _.real_url_homolog }}/login"
     name: Login Normal
     meta:
       id: req_f327a108122a47b883ea58a77ecd1425
       created: 1771869160709
-      modified: 1772567338696
+      modified: 1774277590584
       isPrivate: false
       description: ""
       sortKey: -1768332224930.961
@@ -204,8 +157,8 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"login": "admin-semptcl_",
-        	"pass": "12345678"
+          "login": "admin-semptcl_",
+          "pass": "12345678"
         }
     headers:
       - name: Content-Type
@@ -214,6 +167,37 @@ collection:
         value: insomnia/12.2.0
         description: ""
         disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.real_url_homolog }}/script-case/buy/request"
+    name: GET Random
+    meta:
+      id: req_e03b477381b34861a144ac86aedddb74
+      created: 1773938545735
+      modified: 1774271424913
+      isPrivate: false
+      description: ""
+      sortKey: -1768332224891.462
+    method: GET
+    parameters:
+      - name: page
+        value: "1"
+      - name: perPage
+        value: "10000"
+    headers:
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: "{{token}}"
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -334,12 +318,45 @@ collection:
         meta:
           id: req_54810f00e04847d9acabee5ef0d41eaf
           created: 1772199893948
-          modified: 1772199896287
+          modified: 1773265812340
           isPrivate: false
           description: ""
           sortKey: -1772199893948
         method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            "buyApprobations": {
+            	"created": [],
+            	"updated": [
+            		{
+            			"id": "18387",
+            			"approved": "pending",
+            			"canEdit": true,
+            			"branch": "MATRIZ",
+            			"idBuy": 23526,
+            			"logDate": "2026-03-04T14:11:48.000Z",
+            			"number": "000511",
+            			"observation": "TESTE\n Pedido Retornado!",
+            			"responsable": "Usuario Teste",
+            			"status": "PENDENTE DE APROVACAO",
+            			"total": 90000,
+            			"responsables": [
+            				{
+            					"label": "bruno.matias",
+            					"nivel": 1,
+            					"name": "Usuario Teste",
+            					"status": "pending",
+            					"justify": ""
+            				},
+            			]
+            		}
+            	],
+            	"deleted": []
+            }
         headers:
+          - name: Content-Type
+            value: application/json
           - name: User-Agent
             value: insomnia/12.3.1
             description: ""
@@ -360,14 +377,12 @@ collection:
       sortKey: -1769084856072
       description: ""
     children:
-      - url: "{{ _.realurl
-          }}/maintenance/reports/material-service-order?index=1566&perPage=10&p\
-          eriod%5Bfrom%5D=2025-12-24&period%5Bto%5D=2026-01-23"
+      - url: "{{ _.real_url_homolog }}/script-case/buy/request?perPage=10&page=1"
         name: GET RANDOM
         meta:
           id: req_58b25e27147b4aa6950bb6acdda67fd4
           created: 1768332224893
-          modified: 1769457007926
+          modified: 1774025890315
           isPrivate: false
           description: ""
           sortKey: -1769084877978
@@ -389,12 +404,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.realurl }}/login"
+      - url: "{{ _.real_url_homolog }}/login"
         name: Token Generate Normal
         meta:
           id: req_8df5471bb5c54a6c8a01e598f835ec95
           created: 1769084863427
-          modified: 1769457007926
+          modified: 1774025776225
           isPrivate: false
           description: ""
           sortKey: -1769084878078
@@ -403,8 +418,8 @@ collection:
           mimeType: application/json
           text: |
             {
-            	"login": "cleidiani.silva",
-            	"pass": "WWWWWW"
+            	"login": "bruno.matias",
+            	"pass": "@Bm042008"
             }
         headers:
           - name: Content-Type
@@ -479,21 +494,21 @@ collection:
             send: true
             store: true
           rebuildPath: true
-  - name: App
+  - name: App MVP
     meta:
       id: fld_d0c5649548cf4e9b9e0ab174f19968c8
       created: 1769441609705
-      modified: 1769607257139
+      modified: 1773842968561
       sortKey: -1768419047662.125
       description: ""
     children:
       - url: "{{ _.real_url_smartnew
-          }}/buy/app/list-complete?timestamp=2026-03-04T15:09:00Z"
+          }}/buy/app/list-complete?timestamp=2026-03-11T17:11:00Z"
         name: GET PULL APP
         meta:
           id: req_2c832c48dbe74f33862c306db9515312
           created: 1769441711767
-          modified: 1772653154545
+          modified: 1773317825959
           isPrivate: false
           description: ""
           sortKey: -1769441713943
@@ -514,112 +529,51 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.baseurl }}/buy/app/sync/sync-complete"
+      - url: "{{ _.DesktopLocal }}/buy/app/sync/sync-complete"
         name: POST PUSH APP
         meta:
           id: req_a36b7c9ac96c46d68ce2dd7e107c8bd5
           created: 1769441726700
-          modified: 1769607421121
+          modified: 1773759996197
           isPrivate: false
           description: ""
           sortKey: -1769441713843
         method: POST
         body:
           mimeType: application/json
-          text: |
+          text: >-
             {
-              "changes": {
-                "users": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "branches": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "buyStatuses": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "material": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "materialCode": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "equipment": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "serviceOrder": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "logBuy": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "logBuyItem": {
-                  "created": [
-                    {
-                      "id": "13nLBS3oSE6QBNEe",
-                      "_status": "created",
-                      "_changed": "",
-                      "buy_id": "318d1KCk7CXad6Xz",
-                      "composition_item_id": "item-5",
-                      "material_id": "",
-                      "material_secondary_id": "70601",
-                      "equipment_id": null,
-                      "service_order_id": "121327",
-                      "priority_id": "3",
-                      "quantity": 1,
-                      "vinculo": "os",
-                      "observation": "Teste app",
-                      "approved": false,
-                      "stock": 0,
-                      "id_app": null,
-                      "logDate": "2026-01-28T13:32:25.732Z"
-                    }
-                  ],
-                  "updated": [],
-                  "deleted": []
-                },
-                "compositionGroup": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "buyPriority": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "compositionGroupItem": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "costCenter": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                },
-                "descriptionCostCenter": {
-                  "created": [],
-                  "updated": [],
-                  "deleted": []
-                }
-              }
+            	"changes": {
+            		"buyApprobations": {
+            			"created": [],
+            			"updated": [
+            				{
+            					"id": "13519",
+            					"approved": "Stringe",
+            					"canEdit": true,
+            					"branch": "MATRIZ",
+            					"idBuy": 23526,
+            					"logDate": "2026-03-04T14:11:48.000Z",
+            					"number": "000511",
+            					"observation": "TESTE\n Pedido Retornado!",
+            					"responsable": "Usuario Teste",
+            					"status": "PENDENTE DE APROVACAO",
+            					"total": 90000,
+            					"responsables": [
+            						{
+            							"label": "bruno.matias",
+            							"nivel": 1,
+            							"name": "Usuario Teste",
+            							"status": "true",
+            							"justify": "optional observation from app id 13519",
+            							"signature": "data:image/png;base64,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"
+            						}
+            					]
+            				}
+            			],
+            			"deleted": []
+            		}
+            	}
             }
         headers:
           - name: Content-Type
@@ -639,12 +593,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.real_url_homolog }}/buy/app/list-complete"
+      - url: "{{ _.DesktopLocal }}/buy/app/list-complete"
         name: GET PULL APP NO-TIMESTAMP
         meta:
           id: req_b356558c8ea146deac368d934dc2d591
           created: 1769443665090
-          modified: 1772653136741
+          modified: 1773942855373
           isPrivate: false
           description: ""
           sortKey: -1769441714043
@@ -665,12 +619,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.baseurl }}/script-case/buy/23092/item"
+      - url: "{{ _.DesktopLocal }}/script-case/buy/23092/item"
         name: POST WEB
         meta:
           id: req_9b7d2e6104a14cd681afb15230ba9b81
           created: 1769452920686
-          modified: 1769457007926
+          modified: 1773266438987
           isPrivate: false
           description: ""
           sortKey: -1769441646411.5
@@ -720,22 +674,29 @@ collection:
     meta:
       id: fld_64c75511278a496599cc9fc26413831f
       created: 1769538223813
-      modified: 1769605497054
-      sortKey: -1768375636327.5625
+      modified: 1773842979181
+      sortKey: -1772652876421
       description: ""
     children:
-      - url: "{{ _.real_url_homolog
-          }}/maintenance/reports/material-service-order?index=0&perPage=10&peri\
-          od%5Bfrom%5D=2025-12-28&period%5Bto%5D=2026-01-27"
+      - url: "{{ _.real_url_homolog }}/maintenance/reports/material-service-order"
         name: /manutencao/material-grid
         meta:
           id: req_420495d34b1240eeb86279e2b627962f
           created: 1769538235106
-          modified: 1769715649918
+          modified: 1774028612383
           isPrivate: false
           description: VALOR
           sortKey: -1769538237432
         method: GET
+        parameters:
+          - name: index
+            value: "0"
+          - name: perPage
+            value: "10"
+          - name: period[from]
+            value: 2025-12-28
+          - name: period[to]
+            value: 2026-01-27
         headers:
           - name: User-Agent
             value: insomnia/12.2.0
@@ -752,14 +713,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.real_url_homolog
-          }}/buy/report/stock-buy?index=0&perPage=10&period%5Bfrom%5D=2026-01-0\
-          1&period%5Bto%5D=2026-01-31&startDate=2026-01-01&endDate=2026-01-31 "
+      - url: "{{ _.real_url_homolog }}/buy/report/stock-buy"
         name: "/manutencao/relatorio/entrada-saida-lancamento "
         meta:
           id: req_79d2da6474ed48e8ab7747d4973a8eeb
           created: 1769540566956
-          modified: 1769715802945
+          modified: 1774028616876
           isPrivate: false
           description: |-
             Entrada
@@ -767,6 +726,19 @@ collection:
             Valor Saida
           sortKey: -1769489975737.5
         method: GET
+        parameters:
+          - name: index
+            value: "0"
+          - name: perPage
+            value: "10"
+          - name: period[from]
+            value: 2026-01-01
+          - name: period[to]
+            value: 2026-01-31
+          - name: startDate
+            value: 2026-01-01
+          - name: endDate
+            value: "2026-01-31 "
         headers:
           - name: User-Agent
             value: insomnia/12.2.0
@@ -783,21 +755,36 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.real_url_homolog
-          }}/maintenance/reports/cost-maintainer?index=0&perPage=10&filterText=\
-          &filterData%5Bperiod%5D%5Bfrom%5D=2025-12-28&filterData%5Bperiod%5D%5\
-          Bto%5D=2026-01-27&period%5Bfrom%5D=2025-12-28&period%5Bto%5D=2026-01-\
-          27&date%5Bfrom%5D=2025-12-28&date%5Bto%5D=2026-01-27"
+      - url: "{{ _.real_url_homolog }}/maintenance/reports/cost-maintainer"
         name: /manutencao/custo-manutencao
         meta:
           id: req_6d1e2ac0eaa143dc94df29535d320f58
           created: 1769540623036
-          modified: 1769715829680
+          modified: 1774028619018
           isPrivate: false
           description: |
             CUSTO MATERIAL
           sortKey: -1769489975637.5
         method: GET
+        parameters:
+          - name: index
+            value: "0"
+          - name: perPage
+            value: "10"
+          - name: filterText
+            value: ""
+          - name: filterData[period][from]
+            value: 2025-12-28
+          - name: filterData[period][to]
+            value: 2026-01-27
+          - name: period[from]
+            value: 2025-12-28
+          - name: period[to]
+            value: 2026-01-27
+          - name: date[from]
+            value: 2025-12-28
+          - name: date[to]
+            value: 2026-01-27
         headers:
           - name: User-Agent
             value: insomnia/12.2.0
@@ -846,8 +833,8 @@ collection:
     meta:
       id: fld_c0f71c83f89545a38d9cfc3777d04487
       created: 1770387197183
-      modified: 1770397997889
-      sortKey: -1768343077814.1406
+      modified: 1774025766025
+      sortKey: -1772652876521
       description: ""
     children:
       - url: "{{ _.DesktopLocal }}/buy/report/stock?&material%5B%5D=67632"
@@ -947,7 +934,7 @@ collection:
     meta:
       id: fld_73d1c153fac141eb9359797abc8ef36d
       created: 1770482675369
-      modified: 1770482675369
+      modified: 1773694709536
       sortKey: -1770482675369
       description: ""
     children:
@@ -956,10 +943,10 @@ collection:
         meta:
           id: req_5ed854ee748b41589f833c3200752406
           created: 1768502611538
-          modified: 1771945541464
+          modified: 1773686725514
           isPrivate: false
           description: ""
-          sortKey: -1770482757483
+          sortKey: -1772559649281
         method: POST
         body:
           mimeType: application/json
@@ -1038,12 +1025,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/system/choices/branch"
+      - url: "{{ _.real_url_samae }}/security/user-bound-branch"
         name: System Choices Branchs
         meta:
           id: req_7346d39cb80d44e2960fb7f49de47369
           created: 1771514173170
-          modified: 1771516117663
+          modified: 1773694735350
           isPrivate: false
           description: ""
           sortKey: -1771514173170
@@ -1066,10 +1053,10 @@ collection:
         meta:
           id: req_2ea28e8477014540ad352bf66491d1ff
           created: 1772559649181
-          modified: 1772559865921
+          modified: 1773686746900
           isPrivate: false
           description: ""
-          sortKey: -1772559649181
+          sortKey: -1770482757283
         method: POST
         body:
           mimeType: application/json
@@ -1094,12 +1081,38 @@ collection:
             send: true
             store: true
           rebuildPath: true
-  - name: MVP app
+      - url: "{{ _.DesktopLocal }}/security/user-bound-branch/57"
+        name: New Request
+        meta:
+          id: req_b11a76a5f73145c79a0b3cc53787b74a
+          created: 1773686764331
+          modified: 1773686787163
+          isPrivate: false
+          description: ""
+          sortKey: -1770998465376.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: App Prod
     meta:
       id: fld_7f7cc7ca7f8040368ebe4cc16f69deb9
       created: 1770913597528
-      modified: 1770913611343
-      sortKey: -1768337651403.5703
+      modified: 1773842962409
+      sortKey: -1768549281665.8125
       description: ""
     children:
       - url: "{{ _.DesktopLocal }}/buy/app/list-complete"
@@ -1125,12 +1138,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/login"
+      - url: "{{ _.real_url_homolog }}/login"
         name: Token Generate Normal
         meta:
           id: req_4655f424ecb641b982ee4cff89464b72
           created: 1770913630096
-          modified: 1770930149346
+          modified: 1774278131526
           isPrivate: false
           description: ""
           sortKey: -1770913618251
@@ -1139,8 +1152,8 @@ collection:
           mimeType: application/json
           text: |
             {
-            	"login": "admin-semptcl_",
-            	"pass": "12345678"
+            	"login": "COMDARPE",
+            	"pass": "COMDARPE2"
             }
         headers:
           - name: Content-Type
@@ -1162,10 +1175,10 @@ collection:
         meta:
           id: req_2893f63e08934939a336f5936930b6cf
           created: 1772135803976
-          modified: 1772135834589
+          modified: 1773843005563
           isPrivate: false
           description: ""
-          sortKey: -1772135803976
+          sortKey: -1770913618201
         method: POST
         body:
           mimeType: application/json
@@ -1186,6 +1199,57 @@ collection:
             value: insomnia/12.3.1
             description: ""
             disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.real_url_homolog
+          }}/maintenance/service-order/app/choice/material-stock"
+        name: GET
+        meta:
+          id: req_8b4244b274ef4e6f96cf03fa3688aab5
+          created: 1773843008281
+          modified: 1774276797595
+          isPrivate: false
+          description: ""
+          sortKey: -1770913618163.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.real_url_homolog
+          }}/maintenance/service-order/app/material-service-order"
+        name: New Request
+        meta:
+          id: req_bbfc0c82771845bca48d5f34a89c22fb
+          created: 1774032530930
+          modified: 1774276753774
+          isPrivate: false
+          description: ""
+          sortKey: -1770913618176
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token }}"
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -1270,16 +1334,16 @@ collection:
     meta:
       id: fld_f10eac71068147d48af1b16bb9dd6958
       created: 1772496030391
-      modified: 1772496030391
+      modified: 1773265916805
       sortKey: -1772496030391
       description: ""
     children:
       - url: https://api.cloud-services.yuv.com.br/alarms
-        name: ChartFlow
+        name: YUV
         meta:
           id: req_d45c59db3fc74e1dad9bf2d6c43fc163
           created: 1772490583469
-          modified: 1772551572485
+          modified: 1773773076512
           isPrivate: false
           description: ""
           sortKey: -1772496031739
@@ -1288,9 +1352,11 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "deviceImei": "864993060089266",
-              "startDate": "2026-02-09 00:00:00",
-              "endDate": "2026-02-09 23:59:59"
+                "deviceImei": "864993060089266",
+                "startDate": "2026-03-15 00:00:00",
+                "endDate": "2026-03-30 23:59:59",
+                "page": 1,
+            		"perPage": 5
             }
         headers:
           - name: Content-Type
@@ -1310,12 +1376,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://abreus.store:3333/yuv/jimiAlarms/latest
-        name: New Request
+      - url: https://chartflow.abreus.store/yuv/jimiAlarms/latest
+        name: Chartflow Abreus
         meta:
           id: req_ffcbed803bcc46a8be10a2e3f2a89c1a
           created: 1772496035522
-          modified: 1772551579152
+          modified: 1773776306339
           isPrivate: false
           description: ""
           sortKey: -1772496031839
@@ -1324,20 +1390,313 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "deviceImei": [
-                864993060089266,
-                862798051734115,
-                864993060364172,
-                869247060310775,
-                862798051734115,
-                862798051738926,
-                864993060482933,
-                864993060256055,
-                864993060501534,
-                864993060364172
-              ],
-              "startDate": "2026-02-09 00:00:00",
-              "endDate": "2026-02-09 23:59:59"
+            	"deviceImei": [
+            		864993060089266,
+            		862798051734115,
+            		864993060364172,
+            		869247060310775,
+            		862798051734115,
+            		862798051738926,
+            		864993060482933,
+            		864993060256055,
+            		864993060501534,
+            		864993060364172,
+            		862798051823710,
+            		862798051732028,
+            		864993060382885,
+            		862798051083372,
+            		862798051106041,
+            		864993060247237,
+            		864993060497949,
+            		864993060500502,
+            		864993060418986,
+            		862798051082044,
+            		862798051731384,
+            		862798051737399,
+            		862798051735807,
+            		864993060186658,
+            		864993060252971,
+            		864993060400653,
+            		864993060483055,
+            		864993060482958,
+            		864993060498186,
+            		864993060498509,
+            		864993060373744,
+            		862798050158571,
+            		864993060150092,
+            		864993060190718,
+            		862798051818322,
+            		864993060182970,
+            		862798051767297,
+            		862798051773600,
+            		864993060249787,
+            		864993060248490,
+            		864993060502284,
+            		864993060195584,
+            		864993060250546,
+            		864993060495448,
+            		864993060486637,
+            		864993060499457,
+            		862798051829600,
+            		864993060176915,
+            		864993060399574,
+            		864993060479681,
+            		864993060498699,
+            		864993060365229,
+            		864993060184737,
+            		864993060254589,
+            		864993060488781,
+            		864993060364362,
+            		869247060146872,
+            		864993060191898,
+            		864993060482776,
+            		862798051731244,
+            		864993060497816,
+            		864993060192276,
+            		864993060483659,
+            		864993060406510,
+            		864993060481893,
+            		864993060187748,
+            		862798051081285,
+            		864993060176220,
+            		864993060486298,
+            		864993060479178,
+            		864993060484814,
+            		864993060432235,
+            		864993060499515,
+            		864993060191088,
+            		864993060012904,
+            		864993060492593,
+            		862798051822423,
+            		862798051737175,
+            		864993060501674,
+            		864993060499820,
+            		862798051739916,
+            		864993060143998,
+            		864993060181543,
+            		864993060488245,
+            		862798051828032,
+            		864993060195238,
+            		864993060483519,
+            		864993060483576,
+            		864993060502300,
+            		864993060482784,
+            		864993060494136,
+            		864993060498806,
+            		862798051817621,
+            		864993060177293,
+            		864993060500999,
+            		864993060260263,
+            		864993060397495,
+            		864993060480747,
+            		862798051104285,
+            		869247060138531,
+            		864993060486983,
+            		864993060410330,
+            		864993060195949,
+            		864993060412245,
+            		864993060250611,
+            		864993060191609,
+            		864993060482800,
+            		864993060482941,
+            		862798051082531,
+            		864993060186252,
+            		864993060249027,
+            		864993060483139,
+            		862798051828123,
+            		862798051101240,
+            		864993060381366,
+            		864993060386852,
+            		864993060502219,
+            		864993060481562,
+            		864993060195782,
+            		864993060254456,
+            		862798051821235,
+            		862798051823645,
+            		862798051732739,
+            		864993060400315,
+            		864993060380574,
+            		864993060369213,
+            		864993060499390,
+            		864993060501070,
+            		862798051734321,
+            		864993060249910,
+            		862798051830632,
+            		864993060191773,
+            		864993060193548,
+            		862798051827026,
+            		864993060182756,
+            		869247060315071,
+            		862798051087837,
+            		862798051737191,
+            		862798051081582,
+            		864993060192649,
+            		864993060480358,
+            		864993060500429,
+            		864993060185833,
+            		864993060482867,
+            		864993060482818,
+            		862798051421762,
+            		864993060409175,
+            		864993060143519,
+            		864993060187771,
+            		864993060494128,
+            		864993060183630,
+            		862798051086748,
+            		864993060176279,
+            		862798051089551,
+            		864993060483758,
+            		864993060482750,
+            		864993060194512,
+            		864993060422889,
+            		864993060412849,
+            		864993060498947,
+            		862798050652912,
+            		864993060382828,
+            		862798051732838,
+            		864993060188316,
+            		862798051828131,
+            		864993060143436,
+            		864993060254324,
+            		864993060194470,
+            		862798051824320,
+            		864993060496354,
+            		864993060498087,
+            		864993060486207,
+            		864993060376366,
+            		862798050651344,
+            		864993060184976,
+            		864993060483261,
+            		862798050241047,
+            		864993060181253,
+            		864993060498269,
+            		862798051827224,
+            		864993060180552,
+            		864993060251395,
+            		864993060498517,
+            		864993060387470,
+            		864993060498418,
+            		862798051822555,
+            		864993060261113,
+            		869247060310775,
+            		864993060481042,
+            		864993060497741,
+            		862798051822340,
+            		864993060184729,
+            		864993060498871,
+            		864993060362838,
+            		864993060382083,
+            		864993060502235,
+            		864993060407096,
+            		864993060179026,
+            		864993060481950,
+            		864993060189496,
+            		864993060382976,
+            		862798051788970,
+            		864993060187664,
+            		864993060499374,
+            		864993060144160,
+            		862798051827018,
+            		864993060182913,
+            		864993060184455,
+            		864993060182830,
+            		862798052106800,
+            		862798052104441,
+            		864993060498442,
+            		864993060483444,
+            		862798051087159,
+            		864993060256576,
+            		864993060179331,
+            		864993060492874,
+            		864993060500882,
+            		864993060144236,
+            		864993060176774,
+            		862798050568597,
+            		862798051106447,
+            		864993060182806,
+            		864993060188266,
+            		862798051102131,
+            		864993060400489,
+            		864993060405116,
+            		864993060188571,
+            		862798051827265,
+            		864993060404135,
+            		862798052109176,
+            		864993060247070,
+            		864993060194256,
+            		864993060194918,
+            		864993060195501,
+            		864993060485464,
+            		864993060494144,
+            		862798051825525,
+            		864993060252229,
+            		864993060501484,
+            		864993060499630,
+            		864993060416345,
+            		862798051421572,
+            		864993060398469,
+            		862798052109382,
+            		864993060412013,
+            		864993060399335,
+            		864993060387330,
+            		864993060412229,
+            		864993060183440,
+            		864993060249068,
+            		864993060371755,
+            		864993060382810,
+            		864993060437200,
+            		864993060419117,
+            		864993060498574,
+            		864993060382406,
+            		864993060483634,
+            		864993060369882,
+            		864993060497584,
+            		864993060499473,
+            		864993060487288,
+            		864993060186922,
+            		864993060380582,
+            		864993060502581,
+            		864993060497394,
+            		864993060502144,
+            		864993060364743,
+            		864993060483279,
+            		864993060394252,
+            		864993060381986,
+            		864993060501542,
+            		864993060479772,
+            		864993060389179,
+            		864993060380160,
+            		864993060368645,
+            		864993060426963,
+            		864993060386811,
+            		864993060487973,
+            		864993060502573,
+            		862798051110159,
+            		864993060192326,
+            		864993060498798,
+            		864993060188233,
+            		864993060501153,
+            		864993060490035,
+            		864993060497675,
+            		864993060499408,
+            		862798050565486,
+            		864993060149250,
+            		864993060498939,
+            		862798051824726,
+            		862798051766729,
+            		864993060248086,
+            		864993060501765,
+            		864993060189645,
+            		864993060478220,
+            		862798051739635,
+            		864993060248243,
+            		864993060188043,
+            		864993060481273,
+            		864993060260495,
+            		864993060185098
+            	],
+            	"startDate": "2026-03-17",
+            	"endDate": "2026-03-17"
             }
         headers:
           - name: Content-Type
@@ -1361,20 +1720,61 @@ collection:
             send: true
             store: true
           rebuildPath: true
+      - url: http://192.168.1.210:3333/yuv/jimiAlarms
+        name: Chartflow Abreus LOCAL
+        meta:
+          id: req_807adb05b5524669885365bd4641952d
+          created: 1773771177472
+          modified: 1773773975831
+          isPrivate: false
+          description: ""
+          sortKey: -1772496031789
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "deviceImei": [
+                864993060089266
+              ],
+              "startDate": "2026-03-13",
+              "endDate": "2026-03-30"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: X-API-Key
+            value: teste
+            description: ""
+            disabled: false
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
   - name: aprobbationSprint
     meta:
       id: fld_b37390012c32425982222c9084f15bea
       created: 1772652876321
-      modified: 1772652881938
+      modified: 1772654593722
       sortKey: -1772652876321
       description: ""
     children:
-      - url: https://api-homolog.smartnewservices.com.br/script-case/buy/approbation
+      - url: "{{ _.real_url_homolog }}/script-case/buy/approbation"
         name: approbation
         meta:
           id: req_74aeae38d0c2421fb60b14110c6ca32d
           created: 1772652886643
-          modified: 1772653108210
+          modified: 1772739425681
           isPrivate: false
           description: ""
           sortKey: -1772652886643
@@ -1395,40 +1795,97 @@ collection:
             send: true
             store: true
           rebuildPath: true
+      - url: "{{ _.real_url_homolog }}/script-case/buy/approbation"
+        name: original route
+        meta:
+          id: req_85c41ca6d78149c5bc6097d24312fae8
+          created: 1772739370310
+          modified: 1772739431389
+          isPrivate: false
+          description: ""
+          sortKey: -1772739370310
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Temp Folder
+    meta:
+      id: fld_e08729bd641c4096b5a9e583360ed99d
+      created: 1773938506343
+      modified: 1774025760879
+      sortKey: -1768332224931.3623
+      description: ""
+    children:
+      - url: "{{ _.real_url_homolog }}/script-case/buy/request?perPage=30&page=1"
+        name: GET Random
+        meta:
+          id: req_20be34470557497f80220c193b301351
+          created: 1768570808377
+          modified: 1774277772204
+          isPrivate: false
+          description: ""
+          sortKey: -1773938550923
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_5841193f1bb64e3dabb31e69baeb7fc1
     created: 1769452375278
-    modified: 1772652905822
+    modified: 1774277591689
   cookies:
-    - id: 524b25c1-4fab-4993-af81-3f1b1ac97f2a
+    - id: 845068cf-b5b3-4cac-916c-c3ab60f0f133
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MjY1MjkxNCwiZXhwIjoxNzcyNjYzNzE0fQ.-1W0H0XyZ9ePbmUGyPnrSzVVTOawa6Vs6McKEet3518
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzQyNzc1OTEsImV4cCI6MTc3NDI4ODM5MX0.2MbZ3L6VPGgG_7Qec2VzGbkDNG5CixQgKl842T38R8Q
       domain: api-homolog.smartnewservices.com.br
       path: /
       secure: false
       httpOnly: true
       hostOnly: true
-    - id: 85b9ad2b-8df3-426b-bd8d-55f3d68f006d
+    - id: 803acad6-ee8a-4de5-9e62-d40cf8432d54
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MjU3Mjg0NCwiZXhwIjoxNzcyNTgzNjQ0fQ.W8x00yztgTuoEoWAE6IXdpn58TnbEA8xLd3Q7vgJM9w
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3NDAzNTAyNSwiZXhwIjoxNzc0MDQ1ODI1fQ.nXOjR5eXFaWSNKFHy-170cKzAoP_VhJcic6WfSKZOck
       domain: 192.168.1.210
       path: /
       secure: false
       httpOnly: true
       hostOnly: true
-    - id: 20ffab74-280b-43c3-8045-e0ac967f8473
+    - id: 5554e038-fa6c-4d4b-b912-9195dd1893dd
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwiaWF0IjoxNzcwNDIzOTc5fQ.NJcfa9hHGI-HJohll0aovXwvPWAca3oVJbtnzleXC-o
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwiaWF0IjoxNzczODQ3MTE2fQ.tZaGBLf1BkQQer-V4DNKAFRorPBAGZgNGIOVpSS-CUo
       domain: api.smartnewservices.com.br
       path: /
       secure: true
       httpOnly: true
       hostOnly: true
-    - id: 1c328dd6-ac3d-4d50-b063-ffc622645d01
+    - id: 6d59e65a-f1fb-4bec-9a0a-16e00c4dc246
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MTUwOTMxNCwiZXhwIjoxNzcxNTIwMTE0fQ.C9-ABHbufwS1ys-e5ViP22cZFnmg3bn8N0EOjSFNOyQ
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MzA3NzM3NSwiZXhwIjoxNzczMDg4MTc1fQ.Pqh32p3T3FBPTT6mfnHIdMQU0cRKCNCBSRigAzTvTHU
       domain: api-smartnew.samaecaxias.com.br
       path: /
       secure: true
@@ -1439,10 +1896,10 @@ environments:
   meta:
     id: env_7a20ff17a67a4edebfc848f62fb9002f
     created: 1768332224799
-    modified: 1772652915986
+    modified: 1774277597028
     isPrivate: false
   data:
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MjY1MjkxNCwiZXhwIjoxNzcyNjYzNzE0fQ.-1W0H0XyZ9ePbmUGyPnrSzVVTOawa6Vs6McKEet3518
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzQyNzc1OTEsImV4cCI6MTc3NDI4ODM5MX0.2MbZ3L6VPGgG_7Qec2VzGbkDNG5CixQgKl842T38R8Q
     baseurl: http://localhost:4001
     real_url_homolog: https://api-homolog.smartnewservices.com.br
     real_url_smartnew: https://api.smartnewservices.com.br
