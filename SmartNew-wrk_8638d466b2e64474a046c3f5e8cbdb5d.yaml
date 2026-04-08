@@ -7,12 +7,12 @@ meta:
   modified: 1772648924773
   description: ""
 collection:
-  - url: "{{ _.real_url_homolog }}/login/with-login"
+  - url: "{{ _.DesktopLocal }}/login/with-login"
     name: Login WithLogin
     meta:
       id: req_451e0b4f58934ba5abfdbf24b7b4e787
       created: 1768333449840
-      modified: 1774271221874
+      modified: 1775585287308
       isPrivate: false
       description: ""
       sortKey: -1768332224924.1387
@@ -21,7 +21,7 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"login": "bruno.matias"
+        	"login": "anderson.santos"
         }
     headers:
       - name: Content-Type
@@ -30,48 +30,6 @@ collection:
         value: insomnia/12.2.0
         description: ""
         disabled: false
-    settings:
-      renderRequestBody: true
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
-      rebuildPath: true
-  - url: "{{ _.DesktopLocal }}/script-case/buy/request/18600/item"
-    name: POST Random
-    meta:
-      id: req_be7ee17bf6414a189359ee17f7d2bbb1
-      created: 1768587834893
-      modified: 1773864787759
-      isPrivate: false
-      description: ""
-      sortKey: -1768332224917.3164
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-        	"requestId": 15783,
-        	"financeId": 1702,
-        	"status": 24,
-        	"itemId": [
-        		53255
-        	],
-        	"all_delivered": false,
-        	"justify": "test by insomnia",
-        	"quantity_delivered": 0
-        }
-    headers:
-      - name: Content-Type
-        value: application/json
-      - name: User-Agent
-        value: insomnia/12.2.0
-        description: ""
-        disabled: false
-    authentication:
-      type: bearer
-      token: "{{token}}"
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -81,26 +39,224 @@ collection:
         store: true
       rebuildPath: true
   - url: "{{ _.DesktopLocal
-      }}/script-case/buy/request/16256/finance?login=bruno.matias&clientId=2&mo\
-      dule=9&blank=blank_compras_grid"
-    name: PUT Random
+      }}/maintenance/service-order/3642850/task/description-plan"
+    name: POST Random
     meta:
-      id: req_53f9e82d63274e4aa12fc54a55bc54d9
-      created: 1768836843042
-      modified: 1773865532324
+      id: req_be7ee17bf6414a189359ee17f7d2bbb1
+      created: 1768587834893
+      modified: 1775587165855
       isPrivate: false
       description: ""
-      sortKey: -1768332224891.291
-    method: PUT
+      sortKey: -1768332224917.3164
+    method: POST
     body:
       mimeType: application/json
       text: |-
         {
-            "number": "11112222",
-            "documentType": 1,
-            "emissionDate": "2025-07-07T03:00:00.000Z",
-            "accessKey": "",
-            "dueDate": "2025-12-12T03:00:00.000Z"
+            "plan": [
+                {
+                    "id": 15551,
+                    "taskId": []
+                },
+                {
+                    "id": 15556,
+                    "taskId": []
+                },
+                {
+                    "id": 15557,
+                    "taskId": []
+                },
+                {
+                    "id": 15560,
+                    "taskId": []
+                },
+                {
+                    "id": 15561,
+                    "taskId": []
+                },
+                {
+                    "id": 15571,
+                    "taskId": []
+                },
+                {
+                    "id": 15572,
+                    "taskId": []
+                },
+                {
+                    "id": 15573,
+                    "taskId": []
+                },
+                {
+                    "id": 15581,
+                    "taskId": []
+                },
+                {
+                    "id": 15582,
+                    "taskId": []
+                },
+                {
+                    "id": 15583,
+                    "taskId": []
+                },
+                {
+                    "id": 15584,
+                    "taskId": []
+                },
+                {
+                    "id": 15585,
+                    "taskId": []
+                },
+                {
+                    "id": 15586,
+                    "taskId": []
+                },
+                {
+                    "id": 15587,
+                    "taskId": []
+                },
+                {
+                    "id": 15588,
+                    "taskId": []
+                },
+                {
+                    "id": 15589,
+                    "taskId": []
+                },
+                {
+                    "id": 15590,
+                    "taskId": []
+                },
+                {
+                    "id": 15594,
+                    "taskId": []
+                },
+                {
+                    "id": 15595,
+                    "taskId": []
+                },
+                {
+                    "id": 15596,
+                    "taskId": []
+                },
+                {
+                    "id": 15597,
+                    "taskId": []
+                },
+                {
+                    "id": 15604,
+                    "taskId": []
+                },
+                {
+                    "id": 15665,
+                    "taskId": []
+                },
+                {
+                    "id": 15666,
+                    "taskId": []
+                },
+                {
+                    "id": 15667,
+                    "taskId": []
+                },
+                {
+                    "id": 15668,
+                    "taskId": []
+                },
+                {
+                    "id": 15670,
+                    "taskId": []
+                },
+                {
+                    "id": 15671,
+                    "taskId": []
+                },
+                {
+                    "id": 15672,
+                    "taskId": []
+                },
+                {
+                    "id": 15677,
+                    "taskId": []
+                },
+                {
+                    "id": 15678,
+                    "taskId": []
+                },
+                {
+                    "id": 15679,
+                    "taskId": []
+                },
+                {
+                    "id": 15680,
+                    "taskId": []
+                },
+                {
+                    "id": 15681,
+                    "taskId": []
+                },
+                {
+                    "id": 15684,
+                    "taskId": []
+                },
+                {
+                    "id": 15685,
+                    "taskId": [
+                        4540698
+                    ]
+                },
+                {
+                    "id": 15875,
+                    "taskId": []
+                },
+                {
+                    "id": 15931,
+                    "taskId": []
+                },
+                {
+                    "id": 15932,
+                    "taskId": []
+                },
+                {
+                    "id": 15971,
+                    "taskId": []
+                },
+                {
+                    "id": 15972,
+                    "taskId": []
+                },
+                {
+                    "id": 15973,
+                    "taskId": []
+                },
+                {
+                    "id": 15974,
+                    "taskId": []
+                },
+                {
+                    "id": 15975,
+                    "taskId": []
+                },
+                {
+                    "id": 15976,
+                    "taskId": []
+                },
+                {
+                    "id": 15977,
+                    "taskId": []
+                },
+                {
+                    "id": 15978,
+                    "taskId": []
+                },
+                {
+                    "id": 15979,
+                    "taskId": []
+                },
+                {
+                    "id": 15985,
+                    "taskId": []
+                }
+            ]
         }
     headers:
       - name: Content-Type
@@ -120,12 +276,68 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ _.real_url_samae }}/system/equipment/type-equipment/3"
+  - url: "{{ _.DesktopLocal }}/maintenance/planning/15985"
+    name: PUT Random
+    meta:
+      id: req_53f9e82d63274e4aa12fc54a55bc54d9
+      created: 1768836843042
+      modified: 1775581918661
+      isPrivate: false
+      description: ""
+      sortKey: -1768332224891.291
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"familyId": 5430,
+        	"equipmentId": 531,
+        	"sectorExecutingId": "1",
+        	"typeMaintenanceId": "2646",
+        	"periodicityId": 662,
+        	"unity": 662,
+        	"description": "test",
+        	"type": "automatico",
+        	"increment": 0,
+        	"valueDefault": 2,
+        	"dateInitial": null,
+        	"valueBase": 2,
+        	"enable": true,
+        	"forDay": false,
+        	"anticipation": 1,
+        	"weekly": [
+        		1
+        	],
+        	"osTrigger": "0",
+        	"recalculateByExecution": "N",
+        	"maintainers": [
+        		93
+        	]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.2.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.DesktopLocal }}/system/department/40"
     name: DELETE Random
     meta:
       id: req_30743d45d9b545a2834dbb33db1a40f3
       created: 1770039481648
-      modified: 1773070762192
+      modified: 1774459737866
       isPrivate: false
       description: ""
       sortKey: -1768332224791.291
@@ -143,12 +355,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ _.real_url_homolog }}/login"
+  - url: "{{ _.DesktopLocal }}/login"
     name: Login Normal
     meta:
       id: req_f327a108122a47b883ea58a77ecd1425
       created: 1771869160709
-      modified: 1774277590584
+      modified: 1775586934089
       isPrivate: false
       description: ""
       sortKey: -1768332224930.961
@@ -175,21 +387,16 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ _.real_url_homolog }}/script-case/buy/request"
+  - url: "{{ _.DesktopLocal }}/maintenance/request-service"
     name: GET Random
     meta:
       id: req_e03b477381b34861a144ac86aedddb74
       created: 1773938545735
-      modified: 1774271424913
+      modified: 1775592327268
       isPrivate: false
       description: ""
       sortKey: -1768332224891.462
     method: GET
-    parameters:
-      - name: page
-        value: "1"
-      - name: perPage
-        value: "10000"
     headers:
       - name: User-Agent
         value: insomnia/12.2.0
@@ -502,13 +709,12 @@ collection:
       sortKey: -1768419047662.125
       description: ""
     children:
-      - url: "{{ _.real_url_smartnew
-          }}/buy/app/list-complete?timestamp=2026-03-11T17:11:00Z"
+      - url: "{{ _.DesktopLocal }}/buy/app/list-complete?timestamp=2026-04-02T19:49:00Z"
         name: GET PULL APP
         meta:
           id: req_2c832c48dbe74f33862c306db9515312
           created: 1769441711767
-          modified: 1773317825959
+          modified: 1775159438297
           isPrivate: false
           description: ""
           sortKey: -1769441713943
@@ -534,46 +740,125 @@ collection:
         meta:
           id: req_a36b7c9ac96c46d68ce2dd7e107c8bd5
           created: 1769441726700
-          modified: 1773759996197
+          modified: 1775159343976
           isPrivate: false
           description: ""
           sortKey: -1769441713843
         method: POST
         body:
           mimeType: application/json
-          text: >-
+          text: |-
             {
-            	"changes": {
-            		"buyApprobations": {
-            			"created": [],
-            			"updated": [
-            				{
-            					"id": "13519",
-            					"approved": "Stringe",
-            					"canEdit": true,
-            					"branch": "MATRIZ",
-            					"idBuy": 23526,
-            					"logDate": "2026-03-04T14:11:48.000Z",
-            					"number": "000511",
-            					"observation": "TESTE\n Pedido Retornado!",
-            					"responsable": "Usuario Teste",
-            					"status": "PENDENTE DE APROVACAO",
-            					"total": 90000,
-            					"responsables": [
-            						{
-            							"label": "bruno.matias",
-            							"nivel": 1,
-            							"name": "Usuario Teste",
-            							"status": "true",
-            							"justify": "optional observation from app id 13519",
-            							"signature": "data:image/png;base64,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"
-            						}
-            					]
-            				}
-            			],
-            			"deleted": []
-            		}
-            	}
+              "changes": {
+                "branches": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "buyStatuses": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "users": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "branchesUserCanApprove": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "material": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "materialCode": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "equipment": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "serviceOrder": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "descriptionCostCenter": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "costCenter": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "compositionGroup": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "compositionGroupItem": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "buyPriority": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "logBuy": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "logBuyItem": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "buyApprobations": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "buyApprobationsDetails": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "buyApprobationsItems": {
+                  "created": [],
+                  "updated": [],
+                  "deleted": []
+                },
+                "logBuyToApprove": {
+                  "created": [],
+                  "updated": [
+                    {
+                      "id": "19573",
+                      "number": 177,
+                      "observation": "fd",
+                      "branch_id": "2021",
+                      "status_id": "11",
+                      "log_date": "2026-03-25T11:43:24.000Z",
+                      "log_user": "admin-semptcl_",
+                      "id_app": null,
+                      "rejected_reason": "teste app",
+                      "approval_status_id": "0"
+                    }
+                  ],
+                  "deleted": []
+                }
+              }
             }
         headers:
           - name: Content-Type
@@ -598,7 +883,7 @@ collection:
         meta:
           id: req_b356558c8ea146deac368d934dc2d591
           created: 1769443665090
-          modified: 1773942855373
+          modified: 1775157320468
           isPrivate: false
           description: ""
           sortKey: -1769441714043
@@ -938,12 +1223,12 @@ collection:
       sortKey: -1770482675369
       description: ""
     children:
-      - url: "{{ _.DesktopLocal }}/login"
+      - url: "{{ _.real_url_samae }}/login"
         name: Token Generate Normal
         meta:
           id: req_5ed854ee748b41589f833c3200752406
           created: 1768502611538
-          modified: 1773686725514
+          modified: 1775160913486
           isPrivate: false
           description: ""
           sortKey: -1772559649281
@@ -1025,12 +1310,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.real_url_samae }}/security/user-bound-branch"
+      - url: "{{ _.real_url_samae }}/system/executing-sector"
         name: System Choices Branchs
         meta:
           id: req_7346d39cb80d44e2960fb7f49de47369
           created: 1771514173170
-          modified: 1773694735350
+          modified: 1775161043682
           isPrivate: false
           description: ""
           sortKey: -1771514173170
@@ -1081,12 +1366,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/security/user-bound-branch/57"
+      - url: "{{ _.real_url_samae }}/maintenance/status-order/4125"
         name: New Request
         meta:
           id: req_b11a76a5f73145c79a0b3cc53787b74a
           created: 1773686764331
-          modified: 1773686787163
+          modified: 1774901053907
           isPrivate: false
           description: ""
           sortKey: -1770998465376.5
@@ -1213,7 +1498,7 @@ collection:
         meta:
           id: req_8b4244b274ef4e6f96cf03fa3688aab5
           created: 1773843008281
-          modified: 1774276797595
+          modified: 1774291962948
           isPrivate: false
           description: ""
           sortKey: -1770913618163.5
@@ -1231,13 +1516,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.real_url_homolog
-          }}/maintenance/service-order/app/material-service-order"
+      - url: "{{ _.DesktopLocal }}/maintenance/service-order/app/material-service-order"
         name: New Request
         meta:
           id: req_bbfc0c82771845bca48d5f34a89c22fb
           created: 1774032530930
-          modified: 1774276753774
+          modified: 1774289207957
           isPrivate: false
           description: ""
           sortKey: -1770913618176
@@ -1857,25 +2141,25 @@ cookieJar:
   meta:
     id: jar_5841193f1bb64e3dabb31e69baeb7fc1
     created: 1769452375278
-    modified: 1774277591689
+    modified: 1775587083218
   cookies:
-    - id: 845068cf-b5b3-4cac-916c-c3ab60f0f133
+    - id: ea42c183-6d89-46f4-81d4-0b9d3a8730ca
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzQyNzc1OTEsImV4cCI6MTc3NDI4ODM5MX0.2MbZ3L6VPGgG_7Qec2VzGbkDNG5CixQgKl842T38R8Q
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzUxNTE1MDIsImV4cCI6MTc3NTE2MjMwMn0.v2iYmSc7UY4tRKZMDP8gcU_gHDc8q49SbkN8veQnGvs
       domain: api-homolog.smartnewservices.com.br
       path: /
       secure: false
       httpOnly: true
       hostOnly: true
-    - id: 803acad6-ee8a-4de5-9e62-d40cf8432d54
+    - id: e2a10000-7cac-4228-9625-b0c4d6acc75a
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3NDAzNTAyNSwiZXhwIjoxNzc0MDQ1ODI1fQ.nXOjR5eXFaWSNKFHy-170cKzAoP_VhJcic6WfSKZOck
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzU1ODcwNjgsImV4cCI6MTc3NTU5Nzg2OH0.c3QgiEYGXlX1HFdBuHqR6RAJBl1Pqc9AA2XwQftw340
       domain: 192.168.1.210
       path: /
       secure: false
       httpOnly: true
       hostOnly: true
-    - id: 5554e038-fa6c-4d4b-b912-9195dd1893dd
+    - id: 028d6b56-6378-4291-9436-ad64a9ab43e5
       key: jwt
       value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwiaWF0IjoxNzczODQ3MTE2fQ.tZaGBLf1BkQQer-V4DNKAFRorPBAGZgNGIOVpSS-CUo
       domain: api.smartnewservices.com.br
@@ -1883,12 +2167,20 @@ cookieJar:
       secure: true
       httpOnly: true
       hostOnly: true
-    - id: 6d59e65a-f1fb-4bec-9a0a-16e00c4dc246
+    - id: 8f51996f-ab46-4cf4-9f36-bf6a898f95b1
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3MzA3NzM3NSwiZXhwIjoxNzczMDg4MTc1fQ.Pqh32p3T3FBPTT6mfnHIdMQU0cRKCNCBSRigAzTvTHU
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjEsImlhdCI6MTc3NTE2MDkxNSwiZXhwIjoxNzc1MTcxNzE1fQ.B7C_hpowRzn9aJPhpxBDDPQINLUX2SG0v2sL4WWnX7U
       domain: api-smartnew.samaecaxias.com.br
       path: /
       secure: true
+      httpOnly: true
+      hostOnly: true
+    - id: f99153e9-36e7-4a78-8aad-b5e4cbdf25f8
+      key: jwt
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzQ5MDIyNDEsImV4cCI6MTc3NDkxMzA0MX0.NlBeCON9gt1-qabJkp-a12lpayne5VNYy6e3hVxpSY4
+      domain: api-stg.smartnewservices.com.br
+      path: /
+      secure: false
       httpOnly: true
       hostOnly: true
 environments:
@@ -1896,12 +2188,13 @@ environments:
   meta:
     id: env_7a20ff17a67a4edebfc848f62fb9002f
     created: 1768332224799
-    modified: 1774277597028
+    modified: 1775587088935
     isPrivate: false
   data:
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzQyNzc1OTEsImV4cCI6MTc3NDI4ODM5MX0.2MbZ3L6VPGgG_7Qec2VzGbkDNG5CixQgKl842T38R8Q
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzU1ODcwNjgsImV4cCI6MTc3NTU5Nzg2OH0.c3QgiEYGXlX1HFdBuHqR6RAJBl1Pqc9AA2XwQftw340
     baseurl: http://localhost:4001
+    DesktopLocal: http://192.168.1.210:4001
     real_url_homolog: https://api-homolog.smartnewservices.com.br
     real_url_smartnew: https://api.smartnewservices.com.br
-    DesktopLocal: http://192.168.1.210:4001
     real_url_samae: https://api-smartnew.samaecaxias.com.br
+    api_stg: https://api-stg.smartnewservices.com.br
