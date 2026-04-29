@@ -692,12 +692,12 @@ collection:
       sortKey: -1768788044005.9062
       description: ""
     children:
-      - url: "{{ _.real_url_samae }}/login"
+      - url: "{{ _.DesktopLocal }}/login"
         name: Token Generate Normal
         meta:
           id: req_5ed854ee748b41589f833c3200752406
           created: 1768502611538
-          modified: 1777033791153
+          modified: 1777318173440
           isPrivate: false
           description: ""
           sortKey: -1772559649281
@@ -724,12 +724,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.real_url_samae }}/maintenance/service-order/priority/983"
+      - url: "{{ _.DesktopLocal }}/maintenance/service-order/priority"
         name: GET
         meta:
           id: req_265e1858a77c4853894b9c4a4a844109
           created: 1770482818396
-          modified: 1777033775942
+          modified: 1777470988356
           isPrivate: false
           description: ""
           sortKey: -1771256319273.25
@@ -783,12 +783,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.real_url_samae }}/maintenance/service-order/priority"
+      - url: "{{ _.real_url_samae }}/system/choices/family"
         name: Get Samae
         meta:
           id: req_7346d39cb80d44e2960fb7f49de47369
           created: 1771514173170
-          modified: 1777036744523
+          modified: 1777313958578
           isPrivate: false
           description: ""
           sortKey: -1771514173170
@@ -798,6 +798,9 @@ collection:
             value: insomnia/12.3.1
             description: ""
             disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token }}"
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -839,12 +842,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/maintenance/service-order/priority/981"
+      - url: "{{ _.DesktopLocal }}/maintenance/planning/7976"
         name: Del Samae
         meta:
           id: req_b11a76a5f73145c79a0b3cc53787b74a
           created: 1773686764331
-          modified: 1776968799444
+          modified: 1777403998089
           isPrivate: false
           description: ""
           sortKey: -1770998465376.5
@@ -865,12 +868,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/maintenance/service-order/priority/1031"
+      - url: "{{ _.DesktopLocal }}/maintenance/service-order/priority/989"
         name: Put Samae
         meta:
           id: req_2335555940484f46ad5e408b3e7663a2
           created: 1776964706019
-          modified: 1776970080984
+          modified: 1777472068619
           isPrivate: false
           description: ""
           sortKey: -1771777899935.75
@@ -879,9 +882,16 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "description": "ALTA - Put Test",
-              "deadline": 15,
-              "color": "#ed0336"
+            	"client": "77",
+            	"equipment": "Pixel 3",
+            	"description": "Teste Google",
+            	"family": "8210",
+            	"manufacturer": "Google",
+            	"model": "Pixel",
+            	"criticality": null,
+            	"location": null,
+            	"buyDate": null,
+            	"emissionDateCRV": null
             }
         headers:
           - name: Content-Type
@@ -929,12 +939,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/login"
+      - url: "{{ _.real_url_homolog }}/login"
         name: Token Generate Normal
         meta:
           id: req_4655f424ecb641b982ee4cff89464b72
           created: 1770913630096
-          modified: 1777063191060
+          modified: 1777475983600
           isPrivate: false
           description: ""
           sortKey: -1770913618251
@@ -943,8 +953,8 @@ collection:
           mimeType: application/json
           text: |
             {
-            	"login": "admin-semptcl_",
-            	"pass": "@20306050"
+            	"login": "glastone.silva",
+            	"pass": "Terex321"
             }
         headers:
           - name: Content-Type
@@ -959,12 +969,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/system/material"
+      - url: "{{ _.DesktopLocal }}/maintenance/service-order/app/sync/service-order"
         name: New Request
         meta:
           id: req_2893f63e08934939a336f5936930b6cf
           created: 1772135803976
-          modified: 1776459044535
+          modified: 1777475937686
           isPrivate: false
           description: ""
           sortKey: -1770913618201
@@ -973,27 +983,223 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"body": {
-            		"branch": null,
-            		"material": "Teste Material NCM",
-            		"category": null,
-            		"unity": "4334",
-            		"type_material": "stock",
-            		"observation": "",
-            		"secondaryCode": [
+            	"branch": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"component": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"problem": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"typeMaintenance": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"collaborator": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"user": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"status": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"sectorExecuting": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"priority": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"maintainer": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"equipment": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"requester": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"task": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"legendTask": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"option": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"material": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"classification": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"statusRequestService": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"unity": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"costDiversity": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"positionMaintainer": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"maintenancePlan": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"localization": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"statusControl": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"controlDay": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"request": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"serviceOrder": {
+            		"created": [
             			{
-            				"code": "454544",
-            				"auxiliary_code": "",
-            				"ncm_code": 1239876,
-            				"brand": "454545",
-            				"specification": "454545",
-            				"min_storage": 1,
-            				"max_storage": 1,
-            				"rating": 0,
-            				"locationId": 0,
-            				"equipmentId": []
+            				"id": "0LWQT1FmmLO2QVDH",
+            				"_status": "created",
+            				"_changed": "",
+            				"equipment_id": "396441",
+            				"id_app": null,
+            				"code": "237465",
+            				"request_id": null,
+            				"description": "Teste Pereira ",
+            				"date_emission": "2026-04-28T20:20:05.764Z",
+            				"date_request": "2026-04-28T20:21:00.000Z",
+            				"localization_id": null,
+            				"date_expected": null,
+            				"date_end": null,
+            				"hour_meter": null,
+            				"odometer": null,
+            				"date_machine_stopped": null,
+            				"maintainer_id": null,
+            				"stopped_machine": false,
+            				"priority_id": null,
+            				"service_order_bounded_id": null,
+            				"status_id": "2631",
+            				"type_maintenance_id": "2348",
+            				"date_machine_worked": null,
+            				"sector_executing_id": "",
+            				"branch_id": "25068",
+            				"maintenance_diagnostics": null,
+            				"solution": null,
+            				"executor_observation": null,
+            				"technical_drive": null,
+            				"technical_arrival": null,
+            				"classification_id": null,
+            				"rating": null,
+            				"maintainer": "[]"
             			}
-            		}
+            		],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"serviceOrderImage": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"appointmentHourManual": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"appointmentHour": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"materialServiceOrder": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"requestImage": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"taskImage": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"taskServiceOrder": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"serviceOrderMaintainer": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	},
+            	"registerHourTask": {
+            		"created": [],
+            		"updated": [],
+            		"deleted": []
+            	}
+            }
         headers:
           - name: Content-Type
             value: application/json
@@ -1035,14 +1241,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal
-          }}/maintenance/service-order/app/list-service-order?timestamp=2026-01\
-          -24T21:13:38.097Z"
+      - url: "{{ _.real_url_homolog }}/maintenance/service-order/app/task/list-return"
         name: New Request
         meta:
           id: req_bbfc0c82771845bca48d5f34a89c22fb
           created: 1774032530930
-          modified: 1777066376339
+          modified: 1777317209126
           isPrivate: false
           description: ""
           sortKey: -1770913618176
@@ -2059,12 +2263,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/maintenance/planning/16416"
+      - url: "{{ _.DesktopLocal }}/system/equipment/156"
         name: PUT Random
         meta:
           id: req_53f9e82d63274e4aa12fc54a55bc54d9
           created: 1768836843042
-          modified: 1777312208419
+          modified: 1777472705902
           isPrivate: false
           description: ""
           sortKey: -1777308450004.75
@@ -2073,28 +2277,46 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"familyId": 6888,
-            		"equipmentId": [
-            		381053,
-            		381052
-            	],
-            	"sectorExecutingId": "16",
-            	"typeMaintenanceId": "2651",
-            	"periodicityId": 662,
-            	"unity": 662,
-            	"description": "PARA ATUALIZAR COM O FECHAMENTO DA OS",
-            	"type": "automatico",
-            	"increment": 2,
-            	"valueDefault": 10,
-            	"dateInitial": null,
-            	"valueBase": 0,
-            	"enable": true,
-            	"forDay": false,
-            	"anticipation": 1,
-            	"weekly": [],
-            	"osTrigger": 1,
-            	"recalculateByExecution": "S",
-            	"maintainers": null
+            	"client": "77",
+            	"equipment": "Pixel 3",
+            	"description": "Teste Google",
+            	"family": "8210",
+            	"manufacturer": "Google",
+            	"model": "Pixel",
+            	"equipmentDad": null,
+            	"patrimonyNumber": null,
+            	"criticality": null,
+            	"color": "#000000",
+            	"location": 0,
+            	"costCenter": null,
+            	"observation": null,
+            	"dataSheet": null,
+            	"equipmentType": null,
+            	"serialNumber": null,
+            	"fiscalNumber": null,
+            	"acquisitionValue": null,
+            	"manufacturingYear": null,
+            	"modelYear": null,
+            	"buyDate": null,
+            	"guaranteeTime": null,
+            	"costPerHour": null,
+            	"equipmentStatus": "Ativo",
+            	"consumptionType": null,
+            	"consumptionFuel": null,
+            	"unityMeter": null,
+            	"limitUnityMeter": null,
+            	"owner": null,
+            	"fleet": null,
+            	"chassis": null,
+            	"plate": null,
+            	"reindeerCode": null,
+            	"CRVNumber": null,
+            	"emissionDateCRV": null,
+            	"licensing": null,
+            	"insurancePolicy": null,
+            	"insurancePolicyExpiration": null,
+            	"CTFinameNumber": null,
+            	"recipient": null
             }
         headers:
           - name: Content-Type
@@ -2142,7 +2364,7 @@ collection:
         meta:
           id: req_f327a108122a47b883ea58a77ecd1425
           created: 1771869160709
-          modified: 1777308465537
+          modified: 1777387798992
           isPrivate: false
           description: ""
           sortKey: -1777308450236
@@ -2169,12 +2391,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/system/material/212834/code"
+      - url: "{{ _.DesktopLocal }}/system/equipment/156/component"
         name: POST Random
         meta:
           id: req_96e1d71550324ec4b9c6d470b428b32b
           created: 1777308470080
-          modified: 1777309311952
+          modified: 1777472731169
           isPrivate: false
           description: ""
           sortKey: -1777308450007.875
@@ -2183,29 +2405,12 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"familyId": 6888,
-            	"equipmentId": [
-            		381053,
-            		381052
-            	],
-            	"sectorExecutingId": 1,
-            	"typeMaintenanceId": 2651,
-            	"periodicityId": 662,
-            	"unity": 662,
-            	"description": "TESTE POST COMPUTADORES",
-            	"type": "automatico",
-            	"increment": "1",
-            	"valueDefault": 2,
-            	"dateInitial": null,
-            	"enable": true,
-            	"forDay": false,
-            	"anticipation": 0,
-            	"weekly": [],
-            	"tasks": [],
-            	"valueBase": 2,
-            	"osTrigger": 0,
-            	"recalculateByExecution": "N",
-            	"maintainers": null
+            	"description": "Pixel Component Description",
+            	"manufacturer": "Google Branch Component",
+            	"model": "Google Component Model",
+            	"serialNumber": "Google Serial Number Component",
+            	"manufacturingYear": 0,
+            	"status": "Ativo"
             }
         headers:
           - name: Content-Type
@@ -2225,12 +2430,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.DesktopLocal }}/maintenance/planning"
+      - url: "{{ _.DesktopLocal }}/maintenance/service-order/priority"
         name: GET Random
         meta:
           id: req_aacee394e8324e9f8a722f618a2ef32e
           created: 1777308478703
-          modified: 1777308883193
+          modified: 1777470792213
           isPrivate: false
           description: ""
           sortKey: -1777308450011
@@ -2259,12 +2464,12 @@ collection:
       sortKey: -1768332224929.4058
       description: ""
     children:
-      - url: "{{ _.real_url_homolog }}/system/material/212834/code"
+      - url: "{{ _.DesktopLocal }}/maintenance/planning"
         name: POST Random
         meta:
           id: req_be7ee17bf6414a189359ee17f7d2bbb1
           created: 1768587834893
-          modified: 1777308579323
+          modified: 1777327419020
           isPrivate: false
           description: ""
           sortKey: -1777308547188
@@ -2273,18 +2478,30 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"code": "teste",
-            	"auxiliary_code": null,
-            	"brand": "teste",
-            	"specification": "teste",
-            	"min_storage": 1,
-            	"max_storage": 1,
-            	"ratingId": 0,
-            	"locationId": null,
-            	"equipmentId": [],
-            	"equipment": [],
-            	"id": 1776452731238,
-            	"ncm_code": 777123
+            	"familyId": 25,
+            	"equipmentId": [
+            		246,
+            		247,
+            		273
+            	],
+            	"sectorExecutingId": 1474,
+            	"typeMaintenanceId": 1989,
+            	"periodicityId": 1,
+            	"unity": 1,
+            	"description": "matt",
+            	"type": "automatico",
+            	"increment": "1",
+            	"valueDefault": 2,
+            	"dateInitial": null,
+            	"enable": true,
+            	"forDay": false,
+            	"anticipation": 0,
+            	"weekly": [],
+            	"tasks": [],
+            	"valueBase": 2,
+            	"osTrigger": 0,
+            	"recalculateByExecution": "N",
+            	"maintainers": null
             }
         headers:
           - name: Content-Type
@@ -2447,30 +2664,334 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: Components Project 1082
+    meta:
+      id: fld_460be1bc50a14f4c96546003b27f0d93
+      created: 1777478191240
+      modified: 1777478191240
+      sortKey: -1768560134468.584
+      description: ""
+    children:
+      - url: https://pdf-api-smartnew.samaecaxias.com.br/pdf/equipmentByIds
+        name: PDF
+        meta:
+          id: req_0c07e5d0734c4b3c96d9e5a831ffb2b1
+          created: 1777478191240
+          modified: 1777478191240
+          isPrivate: false
+          description: ""
+          sortKey: -1770482757283
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "equipmentIds": [],
+                "allEquipment": true,
+                "login": "adm_smart"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/component/14699"
+        name: Put /system/component/:id
+        meta:
+          id: req_2196de7f0d154b69933159458da1a1f7
+          created: 1777478191240
+          modified: 1777484310826
+          isPrivate: false
+          description: ""
+          sortKey: -1771777899935.75
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"description": "componente teste - PUT",
+            	"manufacturer": "Edit Manufacturer",
+            	"model": "Edit Model",
+            	"equipment_ids": [156,153]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/maintenance/planning/7976"
+        name: Del Samae
+        meta:
+          id: req_28b85959485b4a76acf0a2c03ebe45c2
+          created: 1777478191240
+          modified: 1777478191240
+          isPrivate: false
+          description: ""
+          sortKey: -1770998465376.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/component"
+        name: Get /system/component
+        meta:
+          id: req_2bb68283da5e461f9cae86d4c0bf7776
+          created: 1777478191240
+          modified: 1777478975991
+          isPrivate: false
+          description: ""
+          sortKey: -1771514173170
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/component"
+        name: Post /system/component
+        meta:
+          id: req_42a09c30340f431081f1d31e935a1536
+          created: 1777478191240
+          modified: 1777479179835
+          isPrivate: false
+          description: ""
+          sortKey: -1772036911225.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "description": "Register Component Test",
+            	"manufacturer": "Manufacturer Test",
+            	"model": "Model Test",
+            	"manufacturingYear":"2026-04-29",
+            	"observation": "Observation Test"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/login"
+        name: Token Generate Normal
+        meta:
+          id: req_b5db3ec673824ca08cfdf1422be03c8c
+          created: 1777478191240
+          modified: 1777478191240
+          isPrivate: false
+          description: ""
+          sortKey: -1772559649281
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"login": "adm_smart",
+            	"pass": "@102030"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/component/14699"
+        name: Get /system/component/:id
+        meta:
+          id: req_ce8f804a5e8147d9897efc92e39fcae8
+          created: 1777478191240
+          modified: 1777484299225
+          isPrivate: false
+          description: ""
+          sortKey: -1771256319273.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/equipment/156/component-link"
+        name: Post /system/equipment/:equipmentId/component-link
+        meta:
+          id: req_dc879dae7a8246babe631c216e2db7b9
+          created: 1777479331786
+          modified: 1777479462617
+          isPrivate: false
+          description: ""
+          sortKey: -1771907405580.625
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"componentId": 14699,
+            	"serialNumber": "Serial Link Test"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/equipment"
+        name: Get /system/equipment
+        meta:
+          id: req_eed7848607a54df0958460a8525b7728
+          created: 1777479423522
+          modified: 1777479429485
+          isPrivate: false
+          description: ""
+          sortKey: -1771127392324.875
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.DesktopLocal }}/system/equipment/156/component-link"
+        name: Get /system/equipment/:equipmentId/component-link
+        meta:
+          id: req_7b8023ef744a41e29f2c607526135874
+          created: 1777479489966
+          modified: 1777479496844
+          isPrivate: false
+          description: ""
+          sortKey: -1771191855799.0625
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_5841193f1bb64e3dabb31e69baeb7fc1
     created: 1769452375278
-    modified: 1777308677138
+    modified: 1777478202841
   cookies:
-    - id: 6d11b359-8994-4e38-b8de-3f551787a8ac
+    - id: e54126a2-df24-45ce-a4f6-d4d6100bc34a
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzcwMzY3NzgsImV4cCI6MTc3NzA0NzU3OH0.uZKHIroviLtONgPig-zJPy6II-VXOGyZs4nvHnUkCO8
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzczMTcxODEsImV4cCI6MTc3NzMyNzk4MX0.G9x0BIQih_IFpueGNutNLdkBIFmKYQ0zGKuvx7alI2A
       domain: api-homolog.smartnewservices.com.br
       path: /
       secure: false
       httpOnly: true
       hostOnly: true
-    - id: 365cf1d5-efbc-4057-ab68-8fd710b3c712
+    - id: f7ae0e31-0d5c-477e-94ac-1b97a5295ef0
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzczMDg2NjksImV4cCI6MTc3NzMxOTQ2OX0.miz1NcimpZLDu9AJVsmavlfvwZS13k8NIq6Rfxvds2M
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjMsImlhdCI6MTc3NzQ3ODE5MSwiZXhwIjoxNzc3NDg4OTkxfQ.8k9K0TDQmd1yrk9bGL2XnmAcyhK2A2_rM0uvCh5-Pu8
       domain: 192.168.1.210
       path: /
       secure: false
       httpOnly: true
       hostOnly: true
-    - id: 7f2bf1a3-093b-4dd9-9f62-0f3c4e20ce35
+    - id: c7ca6fa2-85f9-4935-823d-1af44c969b13
       key: jwt
       value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJicnVuby5tYXRpYXMiLCJjbGllbnRJZCI6MiwiaWF0IjoxNzczODQ3MTE2fQ.tZaGBLf1BkQQer-V4DNKAFRorPBAGZgNGIOVpSS-CUo
       domain: api.smartnewservices.com.br
@@ -2478,15 +2999,15 @@ cookieJar:
       secure: true
       httpOnly: true
       hostOnly: true
-    - id: 5779c277-6f83-4a35-9f65-cb5dfa5a05e1
+    - id: 8e8a6d99-f6b3-401c-810a-8b5074ee3eff
       key: jwt
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjMsImlhdCI6MTc3NzAzMzc5NCwiZXhwIjoxNzc3MDQ0NTk0fQ.GqC7JefhxyHrs6w03FQCc1qAERkajv9_5ntdWJ94IpI
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjMsImlhdCI6MTc3NzMxNjA4NCwiZXhwIjoxNzc3MzI2ODg0fQ.SvZyeTiULYSJBl_tWg2zfN5qDpaC0lHimjJfI1lOoGM
       domain: api-smartnew.samaecaxias.com.br
       path: /
       secure: true
       httpOnly: true
       hostOnly: true
-    - id: 7b166c7b-73a1-4196-8dee-b7057bd902ab
+    - id: 22716cf6-2b85-4f2c-acce-45f42c044129
       key: jwt
       value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzQ5MDIyNDEsImV4cCI6MTc3NDkxMzA0MX0.NlBeCON9gt1-qabJkp-a12lpayne5VNYy6e3hVxpSY4
       domain: api-stg.smartnewservices.com.br
@@ -2499,10 +3020,10 @@ environments:
   meta:
     id: env_7a20ff17a67a4edebfc848f62fb9002f
     created: 1768332224799
-    modified: 1777308684255
+    modified: 1777478110571
     isPrivate: false
   data:
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbi1zZW1wdGNsXyIsImNsaWVudElkIjoyMjEsInRlbmFudElkIjoyLCJpYXQiOjE3NzczMDg2NjksImV4cCI6MTc3NzMxOTQ2OX0.miz1NcimpZLDu9AJVsmavlfvwZS13k8NIq6Rfxvds2M
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1fc21hcnQiLCJjbGllbnRJZCI6MiwidGVuYW50SWQiOjMsImlhdCI6MTc3NzQ3ODA5MiwiZXhwIjoxNzc3NDg4ODkyfQ.sb-PaZ-ibQH0w1kOfGd2J-eLg9Vz35_v6Rng7drfWps
     real_url_homolog: https://api-homolog.smartnewservices.com.br
     real_url_samae: https://api-smartnew.samaecaxias.com.br
     DesktopLocal: http://192.168.1.210:4001
